@@ -30,6 +30,7 @@
     "eslint-plugin-prettier": "^2.5.0",
     "grunt": "latest",
     "grunt-release": "latest",
+    "husky": "^0.14.3",
     "xo": "^0.20.3"
   },
   "engines": {
@@ -37,9 +38,15 @@
   },
   "xo": {
     "prettier": true,
-    "extends": ["prettier"],
-    "plugins": ["prettier"],
-    "ignores": ["Gruntfile.js"],
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "ignores": [
+      "Gruntfile.js"
+    ],
     "rules": {
       "import/no-extraneous-dependencies": "off",
       "prettier/prettier": "error"
@@ -47,5 +54,10 @@
   },
   "scripts": {
     "test": "xo lib/*.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
   }
 }
