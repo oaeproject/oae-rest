@@ -4,13 +4,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-release');
 
     grunt.initConfig({
-        'release': {
-            'options': {
-                'github': {
-                    'repo': 'oaeproject/oae-rest'
-                }
-            }
-        }
+        release: {
+            options: {
+                github: {
+                    repo: 'oaeproject/oae-rest',
+                },
+            },
+        },
     });
 
     grunt.registerTask('release-config-commit', function() {
@@ -30,8 +30,14 @@ module.exports = function(grunt) {
         // we don't want to accidentally run `grunt release` and have
         // it work properly without the proper pre-release version
         // handling
-        grunt.config.set('release.options.github.usernameVar', 'GITHUB_USERNAME');
-        grunt.config.set('release.options.github.passwordVar', 'GITHUB_PASSWORD');
+        grunt.config.set(
+            'release.options.github.usernameVar',
+            'GITHUB_USERNAME',
+        );
+        grunt.config.set(
+            'release.options.github.passwordVar',
+            'GITHUB_PASSWORD',
+        );
 
         if (type === 'prerelease') {
             // Run the standard prerelease task, which will increment the
@@ -41,7 +47,6 @@ module.exports = function(grunt) {
         } else {
             grunt.task.run('release-config-commit');
             grunt.task.run(util.format('release:%s', type));
-
         }
     });
 };
