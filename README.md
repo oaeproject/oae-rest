@@ -1,3 +1,5 @@
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Foaeproject%2Foae-rest.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Foaeproject%2Foae-rest?ref=badge_shield)
+
 The `rest` module for OAE.
 
 This is a stand-alone module that can be used to communicate with a live OAE instance through its REST endpoints.
@@ -19,3 +21,7 @@ To do that, we use the [grunt-release](https://github.com/geddski/grunt-release)
 Therefore if you are on version `4.4.0-3` and you need to upgrade the module for a `5.0.0` release of Hilary, you run the following:
 
 `sh release.sh`, enter your GitHub username and password, enter the release type as `major`, and that will release and publish version `5.0.0` of this module to NPM.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Foaeproject%2Foae-rest.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Foaeproject%2Foae-rest?ref=badge_large)
