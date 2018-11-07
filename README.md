@@ -1,3 +1,9 @@
+![code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+[![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/aa6d33e526e1412793923ddd463f426f)](https://www.codacy.com/app/oaeproject/oae-rest?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=oaeproject/oae-rest&amp;utm_campaign=Badge_Grade)
+[![Known Vulnerabilities](https://snyk.io/test/github/oaeproject/oae-rest/badge.svg)](https://snyk.io/test/github/oaeproject/oae-rest)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Foaeproject%2Foae-rest.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Foaeproject%2Foae-rest?ref=badge_shield)
+
 The `rest` module for OAE.
 
 This is a stand-alone module that can be used to communicate with a live OAE instance through its REST endpoints.
