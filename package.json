@@ -31,7 +31,8 @@
     "grunt": "latest",
     "grunt-release": "latest",
     "husky": "^0.14.3",
-    "xo": "^0.20.3"
+    "prettier": "^1.18.2",
+    "xo": "^0.25.0"
   },
   "engines": {
     "node": ">=8.11.1"
@@ -53,11 +54,11 @@
     }
   },
   "scripts": {
-    "test": "xo lib/*.js"
+    "lint": "xo --prettier --quiet 'lib/**/*.js'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "yarn run lint"
     }
   }
 }
