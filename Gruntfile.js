@@ -1,4 +1,4 @@
-/* eslint-disable-file unicorn/filename-case */
+/* eslint-disable unicorn/filename-case */
 import util from 'util';
 
 export default function(grunt) {

@@ -15,12 +15,7 @@
   "bugs": {
     "url": "https://github.com/oaeproject/oae-rest/issues"
   },
-  "licenses": [
-    {
-      "type": "ECLv2",
-      "url": "http://opensource.org/licenses/ecl2.php"
-    }
-  ],
+  "license": "ECL-2.0",
   "dependencies": {
     "request": "2.88.0",
     "underscore": "^1.9.1"
@@ -30,11 +25,12 @@
     "eslint-plugin-prettier": "^2.5.0",
     "grunt": "latest",
     "grunt-release": "latest",
-    "husky": "^0.14.3",
-    "xo": "^0.20.3"
+    "husky": "^3.0.1",
+    "prettier": "^1.18.2",
+    "xo": "^0.25.0"
   },
   "engines": {
-    "node": ">=8.11.1"
+    "node": ">=10.13.1"
   },
   "xo": {
     "prettier": true,
@@ -53,11 +49,11 @@
     }
   },
   "scripts": {
-    "test": "xo lib/*.js"
+    "lint": "xo --prettier --quiet 'lib/**/*.js'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test"
+      "pre-commit": "yarn run lint"
     }
   }
 }
