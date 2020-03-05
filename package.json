@@ -17,7 +17,7 @@
   },
   "license": "ECL-2.0",
   "dependencies": {
-    "request": "2.88.0",
+    "request": "^2.88.2",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
