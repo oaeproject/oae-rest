@@ -18,14 +18,13 @@
   "license": "ECL-2.0",
   "dependencies": {
     "request": "^2.88.2",
-    "underscore": "^1.9.2"
+    "ramda": "^0.27.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "^3.0.1",
     "grunt": "latest",
     "grunt-release": "latest",
-    "husky": "^3.0.1",
     "prettier": "^1.18.2",
     "xo": "^0.25.0"
   },
@@ -49,11 +48,6 @@
     "rules": {
       "import/no-extraneous-dependencies": "off",
       "prettier/prettier": "error"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run lint"
     }
   }
 }
