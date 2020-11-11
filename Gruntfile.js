@@ -1,7 +1,7 @@
-/* eslint-disable unicorn/filename-case */
+/* eslint-disable unicorn/filename-case, import/no-anonymous-default-export */
 import util from 'util';
 
-export default function(grunt) {
+export default function (grunt) {
   grunt.loadNpmTasks('grunt-release');
 
   grunt.initConfig({
@@ -14,7 +14,7 @@ export default function(grunt) {
     }
   });
 
-  grunt.registerTask('release-config-commit', function() {
+  grunt.registerTask('release-config-commit', function () {
     grunt.config.set('release.options.add', true);
     grunt.config.set('release.options.bump', true);
     grunt.config.set('release.options.commit', true);
@@ -24,7 +24,7 @@ export default function(grunt) {
     grunt.config.set('release.options.tag', true);
   });
 
-  grunt.registerTask('release-version', function(type) {
+  grunt.registerTask('release-version', function (type) {
     type = type || 'prerelease';
 
     // Only set these in the custom release-version task because
