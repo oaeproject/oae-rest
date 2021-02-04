@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/filename-case, import/no-anonymous-default-export */
-import util from 'util';
+import { format } from 'util';
 
 export default function (grunt) {
   grunt.loadNpmTasks('grunt-release');
@@ -14,7 +14,7 @@ export default function (grunt) {
     }
   });
 
-  grunt.registerTask('release-config-commit', function () {
+  grunt.registerTask('release-config-commit', () => {
     grunt.config.set('release.options.add', true);
     grunt.config.set('release.options.bump', true);
     grunt.config.set('release.options.commit', true);
@@ -24,8 +24,7 @@ export default function (grunt) {
     grunt.config.set('release.options.tag', true);
   });
 
-  grunt.registerTask('release-version', function (type) {
-    type = type || 'prerelease';
+  grunt.registerTask('release-version', (type = 'prerelease') => {
 
     // Only set these in the custom release-version task because
     // we don't want to accidentally run `grunt release` and have
@@ -41,7 +40,7 @@ export default function (grunt) {
       grunt.task.run('release:prerelease');
     } else {
       grunt.task.run('release-config-commit');
-      grunt.task.run(util.format('release:%s', type));
+      grunt.task.run(format('release:%s', type));
     }
   });
 }
