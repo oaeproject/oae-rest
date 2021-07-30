@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "grunt": "latest",
-    "grunt-release": "latest",
+    "grunt-release": "^0.14.0",
     "xo": "^0.37.1"
   },
   "engines": {
