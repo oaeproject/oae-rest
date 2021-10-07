@@ -24,32 +24,11 @@
   "devDependencies": {
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "prettier": "^1.18.2",
     "xo": "^0.44.0"
   },
   "engines": {
     "node": ">=16.0.0",
     "npm": ">=7.0.8"
   },
-  "scripts": {
-    "lint": "node_modules/.bin/xo --fix --prettier --quiet 'lib/**/*.js'"
-  },
-  "xo": {
-    "prettier": true,
-    "extends": [
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "ignores": [
-      "node_modules"
-    ],
-    "rules": {
-      "import/no-extraneous-dependencies": "off",
-      "import/extensions": "off",
-      "prettier/prettier": "error",
-      "node/file-extension-in-import": "off"
-    }
-  }
+  "xo": false
 }
