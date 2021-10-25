@@ -2,11 +2,12 @@
   "name": "oae-rest",
   "main": "./lib/api.js",
   "description": "Open Academic Environment (OAE) REST client library",
-  "version": "14.0.0",
+  "version": "16.0.3",
   "homepage": "http://www.oaeproject.org",
+  "type": "module",
   "author": {
     "name": "The Apereo Foundation",
-    "email": "oae-dev@collab.sakaiproject.org"
+    "email": "oae@apereo.org"
   },
   "repository": {
     "type": "git",
@@ -21,30 +22,13 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "grunt": "latest",
-    "grunt-release": "latest",
-    "xo": "^0.37.1"
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "xo": "^0.44.0"
   },
   "engines": {
-    "node": ">=10.13.1"
+    "node": ">=16.0.0",
+    "npm": ">=7.0.8"
   },
-  "scripts": {
-    "lint": "xo --prettier --quiet 'lib/**/*.js'"
-  },
-  "xo": {
-    "prettier": true,
-    "extends": [
-      "prettier"
-    ],
-    "plugins": [
-      "prettier"
-    ],
-    "ignores": [
-      "Gruntfile.js"
-    ],
-    "rules": {
-      "import/no-extraneous-dependencies": "off",
-      "prettier/prettier": "error"
-    }
-  }
+  "xo": false
 }
