@@ -22,7 +22,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "eslint-config-prettier": "6.0.0",
+    "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier": "^3.0.1",
     "xo": "^0.44.0"
   },
